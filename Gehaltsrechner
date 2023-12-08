@@ -1,0 +1,24 @@
+steuerklasse_1 = 1.2     #frei erfundener Multiplikations Faktor hier 20%
+steuerklasse_2 = 1.5     # hier 50%
+steuerklasse_3 = 1.4     # hier 40%
+steuerklasse_4 = 1.3     # hier 30%
+
+
+gehalt = float(input("Wie hoch ist dein Brutto Gehalt: "))
+month = input("Monatlich / Jährlich: ")
+if month == "Monatlich":
+    gehalt = gehalt * 12
+
+steurklasse = input("Student / Alleinerziehend / Verheirat ohne Kind / Verheiratet mit Kind: ")
+if steurklasse in ["Student"]:
+    gehalt = gehalt / steuerklasse_1
+if steurklasse in ["Alleinerziehend"]:
+    gehalt = gehalt / steuerklasse_2
+if steurklasse in ["Verheiratet ohne Kind"]:
+    gehalt = gehalt / steuerklasse_3
+if steurklasse in ["Verheiratet mit Kind"]:
+    gehalt = gehalt / steuerklasse_4
+
+gehalt = round(gehalt, 2)       # Gehalt auf zwei Nachkommastellen runden
+
+print("Dein Jährliches Netto gehalt beträgt " + str(gehalt) + " Euro.")
