@@ -19,6 +19,7 @@ def play():
         print("Setze dein X!", end=' ')
         eingabe = input("Spalte|Zeile")
         player1 = False
+        print(eingabe[0])
     else:
         print("Spieler 2 ist an der Reihe")
         eingabe = input("Setze dein 0!(Spalte|Zeile)")
